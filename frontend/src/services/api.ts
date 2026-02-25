@@ -1,14 +1,11 @@
 import axios from 'axios';
 import { Capacitor } from '@capacitor/core';
 
+const RAILWAY_URL = 'https://amfac-backend-production.up.railway.app';
+
 function getBaseURL(): string {
   if (Capacitor.isNativePlatform()) {
-    // App Android — usa URL do Railway (permanente, sem precisar de computador)
-    return `${import.meta.env.VITE_API_URL || 'http://localhost:3001'}/api`;
-  }
-  // Browser — usa proxy do Vite em dev, URL direta em produção
-  if (import.meta.env.VITE_API_URL) {
-    return `${import.meta.env.VITE_API_URL}/api`;
+    return `${RAILWAY_URL}/api`;
   }
   return '/api';
 }

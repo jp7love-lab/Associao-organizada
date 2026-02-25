@@ -2,7 +2,8 @@ node_modules/
 dist/
 *.db
 *.db-journal
-*.db.lock
+*.db.lock/
 uploads/
-amfac.apk
+*.apk
+*.aab
 .env
