@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.db
+*.db-journal
+*.db.lock
+uploads/
+amfac.apk
+.env
